@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/i/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>{Title}</title>
+  <meta name="description" content="">
+
+  <!-- Mobile viewport optimized: h5bp.com/viewport -->
+  <meta name="viewport" content="width=device-width">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+  <link rel="stylesheet" href="assets/css/style_dark.css">
+  <!--[if gte IE 9]>
+      <style type="text/css">
+	    .gradient {
+	       filter: none;
+	    }
+	  </style>
+	<![endif]-->
+
+  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+  
+  <link rel="shortcut icon" href="assets/ico/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/ico/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/ico/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/ico/apple-touch-icon-114x114.png">
+
+  <!-- All JavaScript at the bottom, except this Modernizr build.
+       Modernizr enables HTML5 elements & feature detects for optimal performance.
+       Create your own custom Modernizr build: www.modernizr.com/download/ -->
+  <script src="assets/js/libs/modernizr.custom.52061.js"></script>
+</head>
+<body>
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+	<header>
+		<div id="top_bar" class="container">
+			<div class="grid">
+				<div id="title_cell" class="unit-block">
+					<ul>
+						<li>
+		      		<svg version="1.0" id="mobile_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50.938px" height="100px" viewBox="0 0 50.938 100" enable-background="new 0 0 50.938 100" xml:space="preserve" fill="#858585">
+		      			<path d="M43.101,0H7.837C3.509,0,0,3.508,0,7.836v84.327C0,96.491,3.509,100,7.837,100h35.264c4.328,0,7.837-3.509,7.837-7.837 V7.836C50.938,3.508,47.429,0,43.101,0z M21.615,8.315h7.708c0.576,0,1.043,0.467,1.043,1.044c0,0.576-0.467,1.043-1.043,1.043 h-7.708c-0.577,0-1.044-0.467-1.044-1.043C20.571,8.782,21.038,8.315,21.615,8.315z M17.123,7.915c0.687,0,1.244,0.557,1.244,1.244 c0,0.687-0.557,1.244-1.244,1.244c-0.687,0-1.244-0.557-1.244-1.244C15.879,8.472,16.437,7.915,17.123,7.915z M25.469,95.772 c-2.705,0-4.898-2.192-4.898-4.897c0-2.706,2.193-4.898,4.898-4.898s4.897,2.192,4.897,4.898 C30.366,93.58,28.174,95.772,25.469,95.772z M47.019,82.489h-43.1V17.511h43.1V82.489z"/>
+		      		</svg>
+		      		
+		      		<svg version="1.1" id="tablet_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="78px" height="100px" viewBox="0 0 78 100" enable-background="new 0 0 78 100" xml:space="preserve" fill="#858585">
+		      			<path d="M73,0H5C2.238,0,0,2.239,0,5v90c0,2.762,2.238,5,5,5h68c2.762,0,5-2.238,5-5V5C78,2.239,75.762,0,73,0z M39,98.5 c-1.381,0-2.5-1.119-2.5-2.5s1.119-2.5,2.5-2.5c1.382,0,2.5,1.119,2.5,2.5S40.382,98.5,39,98.5z M70.001,90.963 c0,0.572-0.464,1.037-1.033,1.037H9.034c-0.569,0-1.033-0.465-1.033-1.037V9.037C8.001,8.464,8.465,8,9.034,8h59.934 c0.569,0,1.033,0.464,1.033,1.037V90.963z"/>
+		      		</svg>
+		      		
+		      		<svg version="1.1" id="desktop_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="83px" viewBox="0 0 100 83" enable-background="new 0 0 100 83" xml:space="preserve" fill="#858585">
+		      			<path d="M99.981,2.312C99.884,1.021,98.816,0,97.5,0h-95C1.184,0,0.116,1.021,0.019,2.312L0,66.5C0,67.881,1.119,69,2.5,69h95 c1.381,0,2.5-1.119,2.5-2.5L99.981,2.312z M96,57H4V4h92V57z"/>
+		      			<path d="M66,81c-4-1-5-4-5-8v-1H50H39v1c0,4-1,7-5,8c-0.97,0.242-1,2,0,2h16h16C67,83,66.97,81.242,66,81z"/>
+		      		</svg>
+		      	</li>
+		      	<li><a href="http://mytemplate.tumblr.com/">{Title}</a></li>
+		      </ul>
+		    </div>
+	      <div id="date_cell" class="unit-block center"><ul><li><a>&nbsp;</a></li></ul></div>
+	      <div id="main_menu_cell" class="unit-block right">
+	      	<ul>
+	      		<li>
+	      			<a href="#main_nav" data-target="main_nav">
+		      			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+		      				<g>
+		      					<g>
+		      						<polygon points="1,83.641 34.287,71.758 39.744,15.472 15.743,27.12   "/>
+		      						<polygon points="63.988,27.617 68.854,83.641 98.002,71.862 83.851,16.075   "/>
+		      						<polygon points="40.909,15.488 35.971,71.758 67.063,83.641 62.713,27.604   "/>
+		      					</g>
+		      				</g>
+		      			</svg>
+	      			</a>
+	      		</li>
+	      		<li>
+	      			<a href="#tags_container" data-target="tags_container">
+	      				<svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="100.001px" viewBox="0 0 100 100.001" enable-background="new 0 0 100 100.001" xml:space="preserve">
+	      					<path d="M0,18.952v18.952l60.135,60.135c2.617,2.616,6.859,2.616,9.476,0L98.038,69.61c2.616-2.616,2.616-6.858,0-9.476L37.903,0 H18.952L0,18.952z M31.398,31.056c-2.617,2.617-6.859,2.617-9.476,0c-2.617-2.617-2.617-6.859,0-9.476 c2.616-2.617,6.858-2.617,9.476,0C34.015,24.197,34.015,28.439,31.398,31.056z"/>
+	      				</svg>
+	      			</a>
+	      		</li>
+	      		<!-- <li>
+	      			<a href="#social_menu" data-target="social_menu">
+	      				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="basic" id="Layer_1" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" xml:space="preserve">
+	      					<g>
+	      						<g>
+	      							<path d="M86.667,6H13.333C5.013,6,0,10.624,0,19.333v43.333C0,71.376,5.013,76,13.333,76l13.333-0.104c0,6.203,0,13.898,0,20.104    H30c5.495-6.501,11.175-13.499,16.667-20h40C94.987,76,100,71.376,100,62.667V19.333C100,10.624,94.987,6,86.667,6z     M93.333,62.666c0,3.667-3,6.667-6.667,6.667H13.333c-3.667,0-6.667-3-6.667-6.667V19.333c0-3.667,3-6.667,6.667-6.667h73.333    c3.667,0,6.667,3,6.667,6.667V62.666z"/>
+	      							<path d="M21.667,42.821c-0.107-0.753-1.621-2.731-1.667-3.488c-0.091-1.372,1.947-2.817,3.333-3.333h13.333    c0-6.667-2.493-8.125-3.333-10c-1.23-2.75-1.56-4.793,0-6.667C35.238,17.043,39.925,14.976,40,16    c0.518,7.43,2.064,11.009,4.141,12.477c1.25,0.886,2.34,1.655,2.914,3.001c3.545,8.265,4.909,10.9,6.279,11.188h3.334l0,0v16.667    l-10,3.334c0,0-13.333,0-16.667,0c-1.341,0-5.426-2.568-5.947-3.708c-0.306-0.654,0.107-2.203-0.248-2.836    c-0.524-0.934-2.737-2.105-2.731-3.38c0-0.905,1.152-2.476,1.064-3.379C22.064,48.456,20,46.907,20,46    C20.006,45.048,21.807,43.764,21.667,42.821z"/>
+	      						</g>
+	      						<path d="M60,59.333c0,1.179,1.985,3.334,3.333,3.334h3.334c1.348,0,3.333-2.155,3.333-3.334V42.667   c0-1.178-1.985-3.333-3.333-3.333h-3.334c-1.348,0-3.333,2.151-3.333,3.333V59.333z"/>
+	      					</g>
+	      				</svg>
+	      			</a>
+	      		</li> -->
+	      		<li>
+	      			<a href="#main_menu" data-target="main_menu">
+	      				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="87.874px" height="54.734px" viewBox="0 0 87.874 54.734" enable-background="new 0 0 87.874 54.734" xml:space="preserve">
+	      					<g>
+	      						<path d="M25.512,51.856c0,1.587-1.321,2.878-2.952,2.878H2.952C1.321,54.734,0,53.444,0,51.856V40.604   c0-1.59,1.321-2.879,2.952-2.879H22.56c1.631,0,2.952,1.289,2.952,2.879V51.856z"/>
+	      						<path d="M56.692,51.856c0,1.587-1.321,2.878-2.952,2.878H34.133c-1.631,0-2.952-1.29-2.952-2.878V40.604   c0-1.59,1.321-2.879,2.952-2.879H53.74c1.631,0,2.952,1.289,2.952,2.879V51.856z"/>
+	      						<path d="M87.874,51.856c0,1.587-1.321,2.878-2.952,2.878H65.314c-1.631,0-2.951-1.29-2.951-2.878V40.604   c0-1.59,1.32-2.879,2.951-2.879h19.607c1.631,0,2.952,1.289,2.952,2.879V51.856z"/>
+	      						<path d="M58.381,16.407c0,1.847-1.496,3.344-3.342,3.344H32.834c-1.846,0-3.342-1.497-3.342-3.344V3.344   C29.494,1.497,30.989,0,32.834,0h22.205c1.846,0,3.342,1.497,3.342,3.344V16.407z"/>
+	      						<polygon points="45.437,26.735 45.437,21.242 42.437,21.242 42.437,26.735 11.256,26.735 11.256,35.985    14.256,35.985 14.256,29.735 42.437,29.735 42.437,35.985 45.437,35.985 45.437,29.735 73.619,29.735 73.619,35.985 76.619,35.985    76.619,26.735  "/>
+	      					</g>
+	      				</svg>
+	      			</a>
+	      		</li>
+	      		<li>
+	      			<a href="#about_me" data-target="about_me">
+	      				<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="76.434px" viewBox="0 0 100 76.434" enable-background="new 0 0 100 76.434" xml:space="preserve">
+	      					<path d="M98.574,67.99C96.458,57.071,67.338,58.232,60.32,49.68c-1.48-1.805-1.48-1.805-0.488-8.507 c1.694-7.502,3.229-2.846,5.651-17.809C67.517,10.798,63.177,0,50,0S32.483,10.798,34.517,23.364 c2.422,14.963,3.956,10.307,5.651,17.809c0.992,6.702,0.992,6.702-0.488,8.507C32.662,58.232,3.542,57.071,1.426,67.99 C1.175,69.282,0,76.434,0,76.434h100C100,76.434,98.825,69.282,98.574,67.99z"/>
+	      				</svg>
+	      			</a>
+	      		</li>
+	      		
+	      	</ul>
+	      </div>
+	      <div id="menu_launcher">
+	      	<ul>
+	      		<li>
+	      			<a href="#" id="show_menu">
+		      			<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="Layer_1" x="0px" y="0px" width="100" height="100" viewBox="0 0 99.999999 100" enable-background="new 0 0 81.193 100" xml:space="preserve" inkscape:version="0.48.2 r9819" sodipodi:docname="button.svg">
+		      				<defs id="defs17"/><sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1187" inkscape:window-height="713" id="namedview15" showgrid="false" inkscape:zoom="5.4255241" inkscape:cx="36.545079" inkscape:cy="50" inkscape:window-x="47" inkscape:window-y="0" inkscape:window-maximized="0" inkscape:current-layer="g3080"/>
+		      				<g id="g3080" transform="translate(-0.19062967,7.3720585)">
+		      					<path inkscape:connector-curvature="0" style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:5.4000001;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" d="m 37.622844,-5.7544812 c -13.307432,0 -24.09375,10.786318 -24.09375,24.0937492 0,13.307432 10.786318,24.09375 24.09375,24.09375 0.02078,0 0.04173,5.3e-5 0.0625,0 -0.444775,-1.701212 -0.912866,-3.403308 -1.375,-5.125 -9.89953,-0.679339 -17.75,-8.898275 -17.75,-18.96875 0,-10.5156792 8.546821,-19.06249919 19.0625,-19.06249919 10.515679,0 19.03125,8.54682099 19.03125,19.06249919 0,5.796247 -2.604189,10.97898 -6.6875,14.46875 0.225867,0.587104 0.461657,1.176023 0.6875,1.75 0.50164,1.274912 0.863768,2.13235 1.28125,3.15625 5.9271,-4.389072 9.78125,-11.432778 9.78125,-19.375 0,-13.3074322 -10.786318,-24.0937492 -24.09375,-24.0937492 z" id="path3880"/><path id="path3017" d="m 38.432215,15.131041 c -0.871508,0.05169 -1.357389,0.397432 -1.75,0.96875 -0.392612,0.571318 -0.647365,1.432375 -0.75,2.4375 -0.205272,2.010249 0.152779,4.527233 0.40625,6.28125 1.158918,8.019696 4.008547,15.665867 5.5625,23.75 0.924643,4.810275 1.306274,9.718714 2.1875,14.40625 l 0.25,1.40625 -1.25,-0.65625 c -0.594651,-0.310279 -1.010816,-0.850924 -1.4375,-1.5 -0.426685,-0.649076 -0.827836,-1.441151 -1.25,-2.25 -0.844328,-1.617698 -1.74283,-3.371837 -2.5625,-4.34375 -1.270159,-1.506072 -2.840134,-3.182195 -4.5,-4.1875 -1.640368,-0.993495 -3.25199,-1.316145 -5,-0.4375 -0.772623,0.702885 -1.054801,1.337463 -1.0625,2.0625 -0.0081,0.755815 0.298691,1.632774 0.78125,2.5625 0.965116,1.859452 2.605436,3.829972 3.09375,5.875 1.215088,5.088751 4.296256,9.065061 7.03125,13.40625 2.137599,3.392946 3.727449,7.133279 7.03125,8.8125 4.357618,2.214844 8.147273,5.714131 12.46875,6.4375 5.24925,0.878667 11.11617,1.141683 16.15625,0.46875 4.99663,-0.667132 9.1063,-2.299311 11.03125,-4.90625 4.12862,-16.755513 1.52064,-27.660364 -5.15625,-36.78125 -4.47531,-1.524896 -11.18888,-2.425794 -16.8125,-2.875 -5.689043,-0.45443 -10.21875,-0.5 -10.21875,-0.5 l -0.46875,0 -0.15625,-0.40625 c 0,0 -1.899851,-4.525761 -3.90625,-9.625 -2.0064,-5.099239 -4.123203,-10.704926 -4.59375,-13.28125 -0.433102,-2.371296 -0.868975,-4.28003 -1.59375,-5.46875 -0.724776,-1.18872 -1.597356,-1.770954 -3.53125,-1.65625 z" inkscape:connector-curvature="0"/>
+		      				</g>
+		      			</svg>
+	      			</a>
+	      			<a href="#" id="hide_menu">
+	      				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+	      					<g id="Layer_1_1_" display="none">
+	      						<g display="inline">
+	      							<path d="M20.916,56.396c-9.111,1.69-16.014,9.666-16.014,19.266c0,9.602,6.903,17.574,16.014,19.264V56.396z"/>
+	      							<path d="M28.105,56.396v38.528c9.11-1.688,16.013-9.661,16.013-19.264C44.118,66.062,37.215,58.088,28.105,56.396z"/>
+	      						</g>
+	      						<g display="inline">
+	      							<path d="M39.312,51.303l11.99-11.991c0.175-0.307,0.144-0.697-0.116-0.958l-3.135-3.135c-0.312-0.312-0.82-0.312-1.134,0.001    c-0.922,0.922-2.423,0.921-3.345,0c-0.923-0.923-0.922-2.423,0.001-3.345c0.312-0.315,0.312-0.822-0.001-1.135L16.361,3.527    C12.825-0.009,7.283,0.206,3.745,3.744s-3.753,9.08-0.217,12.616l27.213,27.211c0.313,0.314,0.822,0.312,1.135,0    c0.922-0.922,2.421-0.923,3.345,0c0.921,0.922,0.922,2.423,0,3.346c-0.314,0.313-0.315,0.822-0.002,1.134l3.134,3.137    C38.615,51.445,39.005,51.477,39.312,51.303z"/>
+	      							<polygon points="48.092,44.373 44.373,48.092 81.838,85.559 84.252,90.516 95.299,99.02 99.02,95.3 90.516,84.252 85.559,81.84       "/>
+	      						</g>
+	      					</g>
+	      					<polygon points="65.277,48.474 88.57,71.768 73.611,86.727 50.317,63.434 27.03,86.721 12.071,71.761 35.358,48.473 12.071,25.187   27.03,10.227 50.317,33.513 73.607,10.223 88.57,25.184 "/>
+	      				</svg>
+	      			</a>
+	      		</li>
+	      	</ul>
+	      </div>
+		  </div>
+		</div>
+	</header>
+  
+  <div id="main_wrapper">
+  	<div id="aside_container">
+  		<div class="nano">
+          <div class="content">
+          	<nav id="main_nav" class="side_unit" data-art-id="">
+          		<div class="cf title_bar">
+          			<div class="title_img">
+          				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+			      				<g>
+			      					<g>
+			      						<polygon points="1,83.641 34.287,71.758 39.744,15.472 15.743,27.12   "/>
+			      						<polygon points="63.988,27.617 68.854,83.641 98.002,71.862 83.851,16.075"/>
+			      						<polygon points="40.909,15.488 35.971,71.758 67.063,83.641 62.713,27.604"/>
+			      					</g>
+			      				</g>
+			      			</svg>
+          			</div>
+          			<div class="title">
+          				<h4>Content</h4>
+          			</div>
+          		</div>
+			  			<ul class="widget_content">
+                          loading...
+			  				<!-- Main Navigation According To Article Content-->
+			  			</ul>
+			  		</nav>
+			  		<aside id="tags_container" class="side_unit">
+			  			<div class="cf title_bar">
+          			<div class="title_img">
+          				<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="100.001px" viewBox="0 0 100 100.001" enable-background="new 0 0 100 100.001" xml:space="preserve">
+	      						<path d="M0,18.952v18.952l60.135,60.135c2.617,2.616,6.859,2.616,9.476,0L98.038,69.61c2.616-2.616,2.616-6.858,0-9.476L37.903,0 H18.952L0,18.952z M31.398,31.056c-2.617,2.617-6.859,2.617-9.476,0c-2.617-2.617-2.617-6.859,0-9.476 c2.616-2.617,6.858-2.617,9.476,0C34.015,24.197,34.015,28.439,31.398,31.056z"/>
+	      					</svg>
+          			</div>
+          			<div class="title">
+          				<h4>Tags</h4>
+          			</div>
+          		</div>
+          		<div class="widget_content">
+                  loading...
+          			<!-- Tags According To Article Tags-->
+			  			</div>
+			  		</aside>
+			  		<div id="main_menu" class="side_unit">
+			  			<div class="cf title_bar">
+          			<div class="title_img">
+          				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="87.874px" height="54.734px" viewBox="0 0 87.874 54.734" enable-background="new 0 0 87.874 54.734" xml:space="preserve">
+		      					<g>
+		      						<path d="M25.512,51.856c0,1.587-1.321,2.878-2.952,2.878H2.952C1.321,54.734,0,53.444,0,51.856V40.604   c0-1.59,1.321-2.879,2.952-2.879H22.56c1.631,0,2.952,1.289,2.952,2.879V51.856z"/>
+		      						<path d="M56.692,51.856c0,1.587-1.321,2.878-2.952,2.878H34.133c-1.631,0-2.952-1.29-2.952-2.878V40.604   c0-1.59,1.321-2.879,2.952-2.879H53.74c1.631,0,2.952,1.289,2.952,2.879V51.856z"/>
+		      						<path d="M87.874,51.856c0,1.587-1.321,2.878-2.952,2.878H65.314c-1.631,0-2.951-1.29-2.951-2.878V40.604   c0-1.59,1.32-2.879,2.951-2.879h19.607c1.631,0,2.952,1.289,2.952,2.879V51.856z"/>
+		      						<path d="M58.381,16.407c0,1.847-1.496,3.344-3.342,3.344H32.834c-1.846,0-3.342-1.497-3.342-3.344V3.344   C29.494,1.497,30.989,0,32.834,0h22.205c1.846,0,3.342,1.497,3.342,3.344V16.407z"/>
+		      						<polygon points="45.437,26.735 45.437,21.242 42.437,21.242 42.437,26.735 11.256,26.735 11.256,35.985    14.256,35.985 14.256,29.735 42.437,29.735 42.437,35.985 45.437,35.985 45.437,29.735 73.619,29.735 73.619,35.985 76.619,35.985    76.619,26.735  "/>
+		      					</g>
+		      				</svg>
+          			</div>
+          			<div class="title">
+          				<h4>menu</h4>
+          			</div>
+          		</div>
+			  			<ul class="widget_content">
+			  				<li>
+			  					<a href="http://mytemplate.tumblr.com">
+			  						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="84px" viewBox="0 0 100 84" enable-background="new 0 0 100 84" xml:space="preserve">
+			  							<polygon points="82,32.641 82,9 68,9 68,18.359 50,0 0,51 12,51 12,84 43,84 43,57 57,57 57,84 88,84 88,51 100,51 "/>
+			  						</svg>
+			  					</a>
+			  				</li>
+			  				<li>
+			  					<a href="http://mytemplate.tumblr.com/archive">
+			  						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="88px" height="100px" viewBox="0 0 88 100" enable-background="new 0 0 88 100" xml:space="preserve">
+			  							<path d="M0,32v59.906C0,96.377,3.582,100,8,100h72c4.418,0,8-3.623,8-8.094V32H0z M22,94H6V78h16V94z M22,74H6V58h16V74z M22,54H6 V38h16V54z M42,94H26V78h16V94z M42,74H26V58h16V74z M42,54H26V38h16V54z M62,94H46V78h16V94z M62,74H46V58h16V74z M62,54H46V38h16 V54z M82,94H66V78h16V94z M82,74H66V58h16V74z M82,54H66V38h16V54z"/>
+			  							<path d="M80,12H67V3c0-1.657-1.344-3-3-3c-1.657,0-3,1.343-3,3v9H27V3c0-1.657-1.344-3-3-3c-1.657,0-3,1.343-3,3v9H8 c-4.418,0-8,3.623-8,8.093V27v0v1h88v-1v0v-6.907C88,15.623,84.418,12,80,12z M24,26c-3.313,0-6-2.687-6-6 c0-2.219,1.209-4.152,3-5.19V20c0,1.657,1.343,3,3,3c1.656,0,3-1.343,3-3v-5.191c1.792,1.038,3,2.972,3,5.191 C30,23.313,27.314,26,24,26z M64,26c-3.313,0-6-2.687-6-6c0-2.219,1.209-4.152,3-5.19V20c0,1.657,1.343,3,3,3c1.656,0,3-1.343,3-3 v-5.191c1.792,1.038,3,2.972,3,5.191C70,23.313,67.314,26,64,26z"/>
+			  						</svg>
+			  					</a>
+			  				</li>
+			  				<li>
+			  					<a href="http://mytemplate.tumblr.com/rss">
+			  						<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="98.918px" height="100px" viewBox="0 0 98.918 100" enable-background="new 0 0 98.918 100" xml:space="preserve">
+			  							<ellipse cx="13.566" cy="86.286" rx="13.566" ry="13.714"/>
+			  							<path d="M65.569,100H46.35c0-25.879-20.752-46.858-46.35-46.858l0,0V33.715C36.214,33.715,65.569,63.391,65.569,100z"/>
+			  							<path d="M79.135,100c0-44.183-35.429-80-79.135-80V0c54.631,0,98.918,44.772,98.918,100H79.135z"/>
+			  						</svg>
+			  					</a>
+			  				</li>
+			  			</ul>
+			  		</div>
+			  		<div id="about_me" class="side_unit">
+			  			<div class="cf title_bar">
+          			<div class="title_img">
+          				<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="76.434px" viewBox="0 0 100 76.434" enable-background="new 0 0 100 76.434" xml:space="preserve">
+		      					<path d="M98.574,67.99C96.458,57.071,67.338,58.232,60.32,49.68c-1.48-1.805-1.48-1.805-0.488-8.507 c1.694-7.502,3.229-2.846,5.651-17.809C67.517,10.798,63.177,0,50,0S32.483,10.798,34.517,23.364 c2.422,14.963,3.956,10.307,5.651,17.809c0.992,6.702,0.992,6.702-0.488,8.507C32.662,58.232,3.542,57.071,1.426,67.99 C1.175,69.282,0,76.434,0,76.434h100C100,76.434,98.825,69.282,98.574,67.99z"/>
+		      				</svg>
+          			</div>
+          			<div class="title">
+          				<h4>about me</h4>
+          			</div>
+          		</div>
+			  			<p class="widget_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin interdum faucibus erat, non aliquet lacus rutrum nec. Nulla pellentesque nunc ut odio mollis faucibus. Etiam eget magna ut metus commodo porta in ac nulla. Donec nec velit interdum magna vehicula facilisis sed ac ante. Proin ut nibh erat, et molestie ante. Aliquam condimentum sollicitudin lacus a sollicitudin. Etiam vulputate tortor tortor, in malesuada purus. Nullam ligula sapien, pretium et scelerisque non, venenatis ac enim. Quisque pulvinar sapien sit amet lacus consectetur a suscipit diam fringilla. Integer quis sem congue ligula condimentum ultrices. In vehicula pretium urna nec dignissim. Sed quis sem nibh, a feugiat elit.</p>
+			  		</div>
+          </div>
+      </div>
+  	</div>
+  	<div id="main_container">
+  		<div class="nano">
+  			<div class="content" id="main_focus">
+  					<section class="">
+	  					{block:Posts}
+	                      
+	  						{block:Text}
+	  						<article class="container text" id="art_{PostID}">
+	  							
+	  							<div class="grid">
+	  								<div class="unit-1-3">
+	  									<figure>
+			              		<img src="" alt="" class="intro_img">
+			              	</figure>
+	  								</div>
+	  								
+	  								<div class="unit-2-3 article_header_info">
+	  									<h1><a href="{Permalink}">{Title}</a></h1>
+	  									<p class="intro_text">&nbsp;</p>
+	  								</div>
+	  							</div>
+	  							{Body}
+	  							<hr />
+	  							<div class="grid">
+	  								<div class="unit-1-2 post_date">
+	  									{DayOfWeek}, {DayOfMonthWithZero} {DayOfMonthSuffix} {Month} {Year} - {12HourWithZero}.{Minutes} {CapitalAmPm}
+	  								</div>
+	  								<div class="unit-1-2 post_comment_text">
+	  									<a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a>
+	  								</div>
+	  								<div class="unit-full hidden art_tags">
+	  									{block:HasTags}
+		  									{block:Tags}
+		  										<a href="{TagURL}"><span class="tag">{Tag}</span></a>
+		  									{/block:Tags}
+		  								{/block:HasTags}
+	  								</div>
+	  							</div>
+	  							<hr />
+	  						</article>
+	  						{/block:Text}
+	  						
+	  						{block:Link}
+	  						<article class="container link" id="art_{PostID}">
+	  							
+	  							<div class="grid">
+	  								<div class="unit-1-3">
+	  									<figure>
+			              		<img src="" alt="" class="intro_img">
+			              	</figure>
+	  								</div>
+	  								
+	  								<div class="unit-2-3 article_header_info">
+	  									<h1><a href="{URL}" {Target}>{Name}</a></h1>
+	  									<p class="intro_text">&nbsp;</p>
+	  								</div>
+	  							</div>
+	  							{block:Description}
+	  								{Description}
+	  							{/block:Description}
+	  							<hr />
+	  							<div class="grid">
+	  								<div class="unit-1-2 post_date">
+	  									{DayOfWeek}, {DayOfMonthWithZero} {DayOfMonthSuffix} {Month} {Year} - {12HourWithZero}.{Minutes} {CapitalAmPm}
+	  								</div>
+	  								<div class="unit-1-2 post_comment_text">
+	  									<a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a>
+	  								</div>
+	  								<div class="unit-full hidden art_tags">
+	  									{block:HasTags}
+		  									{block:Tags}
+		  										<a href="{TagURL}"><span class="tag">{Tag}</span></a>
+		  									{/block:Tags}
+		  								{/block:HasTags}
+	  								</div>
+	  							</div>
+	  							<hr />
+	  						</article>
+	  						{/block:Link}
+	  						
+	  						{block:Photo}
+	  						<article class="container photo" id="art_{PostID}">
+	  							
+	  							<div class="grid">
+	  								<div class="unit-full">
+			              	<figure>
+			              		<img src="{PhotoURL-500}" alt="{PhotoAlt}">
+			              		{block:Caption}
+				              		<figcaption>{Caption}</figcaption>
+			              		{/block:Caption}
+			              	</figure>
+			              </div>
+	  							</div>
+	  							<hr />
+	  							<div class="grid">
+	  								<div class="unit-1-2 post_date">
+	  									{DayOfWeek}, {DayOfMonthWithZero} {DayOfMonthSuffix} {Month} {Year} - {12HourWithZero}.{Minutes} {CapitalAmPm}
+	  								</div>
+	  								<div class="unit-1-2 post_comment_text">
+	  									<a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a>
+	  								</div>
+	  								<div class="unit-full hidden art_tags">
+	  									{block:HasTags}
+		  									{block:Tags}
+		  										<a href="{TagURL}"><span class="tag">{Tag}</span></a>
+		  									{/block:Tags}
+		  								{/block:HasTags}
+	  								</div>
+	  							</div>
+	  							<hr />
+	  						</article>
+	  						{/block:Photo}
+	  						
+	  						{block:Chat}
+	  						<article class="container chat" id="art_{PostID}">
+	  							
+	  							<div class="grid">
+	  								<div class="unit-full">
+	  									{block:Title}
+	  										<h1><a href="{Permalink}">{Title}</a></h1>
+	  									{/block:Title}
+	  								</div>
+	  								{block:Lines}
+	  									<div class="unit-full {Alt} user_{UserNumber}">
+	  										{block:Label}
+	  											<span class="label">{Label}</span>
+	  										{/block:Label}
+	  										{Line}
+	  									</div>
+	  								{/block:Lines}
+	  							</div>
+	  							<hr />
+	  							<div class="grid">
+	  								<div class="unit-1-2 post_date">
+	  									{DayOfWeek}, {DayOfMonthWithZero} {DayOfMonthSuffix} {Month} {Year} - {12HourWithZero}.{Minutes} {CapitalAmPm}
+	  								</div>
+	  								<div class="unit-1-2 post_comment_text">
+	  									<a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a>
+	  								</div>
+	  								<div class="unit-full hidden art_tags">
+	  									{block:HasTags}
+		  									{block:Tags}
+		  										<a href="{TagURL}"><span class="tag">{Tag}</span></a>
+		  									{/block:Tags}
+		  								{/block:HasTags}
+	  								</div>
+	  							</div>
+	  							<hr />
+	  						</article>
+	  						{/block:Chat}
+	  						
+	  						{block:Quote}
+	  						<article class="container quote" id="art_{PostID}">
+	  							
+	  							<div class="grid">
+	  								<div class="unit-full">
+	  									<blockquote>{Quote}</blockquote>
+	  								</div>
+	  								{block:Source}
+	  									<hr style="visibility:hidden"/>
+	  									<div class="unit-full right">{Source}</div>
+	  								{/block:Source}
+	  							</div>
+	  							<hr />
+	  							<div class="grid">
+	  								<div class="unit-1-2 post_date">
+	  									{DayOfWeek}, {DayOfMonthWithZero} {DayOfMonthSuffix} {Month} {Year} - {12HourWithZero}.{Minutes} {CapitalAmPm}
+	  								</div>
+	  								<div class="unit-1-2 post_comment_text">
+	  									<a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a>
+	  								</div>
+	  								<div class="unit-full hidden art_tags">
+	  									{block:HasTags}
+		  									{block:Tags}
+		  										<a href="{TagURL}"><span class="tag">{Tag}</span></a>
+		  									{/block:Tags}
+		  								{/block:HasTags}
+	  								</div>
+	  							</div>
+	  							<hr />
+	  						</article>
+	  						{/block:Quote}
+	  						
+	  					{/block:Posts}
+  					
+	  					<!-- comment -->
+	  					<script type="text/javascript">var disqus_url = "{Permalink}"; var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";</script>{block:Permalink}<div id="disqus_thread"></div>
+	  					<script type="text/javascript">
+							/**
+							  * var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
+							  */
+							(function() {
+							 var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+							 dsq.src = 'http://phronemo.disqus.com/embed.js';
+							 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+							})();
+							</script>
+							<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=phronemo">comments powered by Disqus.</a></noscript>
+							<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+							{/block:Permalink}<script type="text/javascript">
+							var disqus_shortname = 'phronemo';
+							(function () {
+							  var s = document.createElement('script'); s.async = true;
+							s.src = 'http://phronemo.disqus.com/count.js';
+							(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+							}());
+							</script>
+		
+  					</section>
+  					
+  					{block:Pagination}
+  					<div class="container">
+  						<div class="grid">
+  							<div class="unit-full">
+			  					<div class="pagination">
+			  						<a href="page/1" class="first" data-action="first">&laquo;</a>
+			  						<a href="{PreviousPage}" class="previous" data-action="previous">&lsaquo;</a>
+			  						<input type="text" readonly="readonly" data-max-page="{TotalPages}" data-current-page="{CurrentPage}"/>
+			  						<a href="{NextPage}" class="next" data-action="next">&rsaquo;</a>
+			  						<a href="page/{TotalPages}" class="last" data-action="last">&raquo;</a>
+			  						<hr/>
+			  					</div>
+		  					</div>
+	  					</div>
+  					</div>
+  					{/block:Pagination}
+
+  			</div>
+      </div>
+  	</div>
+  	<div id="modal_overlay"></div>
+  </div>
+  <!-- JavaScript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="assets/js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+
+  <!-- scripts concatenated and minified via build script -->
+  <script src="assets/js/plugins.js"></script>
+  <script src="assets/js/script.js"></script>
+  <!-- end scripts -->
+  
+  <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
+       mathiasbynens.be/notes/async-analytics-snippet -->
+  <script>
+    var _gaq=[['_setAccount','UA-XXXXXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+</body>
+</html>
